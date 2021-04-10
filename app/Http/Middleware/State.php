@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class Session
+class State
 {
     /**
      * Handle an incoming request.
@@ -16,8 +16,8 @@ class Session
      */
     public function handle(Request $request, Closure $next)
     {
-        if (session('token') != null)
+        if (session('token') == null)
             return $next($request);
-        return redirect(route('view.login'));
+        return redirect(route('dashboard.index'));
     }
 }

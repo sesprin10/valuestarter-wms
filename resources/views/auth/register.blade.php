@@ -82,7 +82,7 @@
                                 <div class="row justify-content-center">
                                     <span>{{ __('Already have an account?') }}</span>
                                     &nbsp;{{ 'Log in' }}&nbsp;
-                                    <a href="#">{{ __('here') }}</a>.
+                                    <a href="{{ route('view.login') }}">{{ __('here') }}</a>.
                                 </div>
                             </div>
                         </div>
@@ -90,6 +90,7 @@
                 </div>
             </div>
         </div>
+
         <script src="{{ asset(Constants::COREUI_JS_COREUIBUNDLE) }}"></script>
         <script src="{{ asset(Constants::COREUI_ICONS_JS_SVGXUSE) }}"></script>
     </body>

@@ -7,6 +7,7 @@ use App\Http\Middleware\EncryptCookies;
 use App\Http\Middleware\PreventRequestsDuringMaintenance;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Middleware\Session;
+use App\Http\Middleware\State;
 use App\Http\Middleware\TrimStrings;
 use App\Http\Middleware\TrustProxies;
 use App\Http\Middleware\VerifyCsrfToken;
@@ -83,6 +84,7 @@ class Kernel extends HttpKernel
         'password.confirm' => RequirePassword::class,
         'session' => Session::class,
         'signed' => ValidateSignature::class,
+        'state' => State::class,
         'throttle' => ThrottleRequests::class,
         'verified' => EnsureEmailIsVerified::class,
     ];
